@@ -340,7 +340,7 @@ header .action .searchBx input {
 .Category .boxBx .box{
     width: 350px;
     border-radius: 10px;
-    margin: 20px 20px;
+    margin: 20px 15px;
     /* background: linear-gradient(#050505, rgb(0, 255, 242)); */
     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
     background: linear-gradient();
