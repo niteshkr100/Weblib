@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weblib</title>
+    <link rel="stylesheet" href="designing.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="games animeX" id="website">
+        <h2>Websites</h2>
+        <ul>
+            <li class="list active" data-filter="all">Designing</li>
+            <!-- <li class="list" data-filter="pc">Top Sites</li>
+            <li class="list" data-filter="mobile">New Sites</li> -->
+        </ul>
+        <div class="cardBx">
+            <div class="card" data-item="pc">
+                <img src="canva.png" alt="">
+                <div class="content">
+                    <h4>Canva</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://canva.com/">Link</a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="card" data-item="mobile">
+                <img src="figma.png" alt="">
+                <div class="content">
+                    <h4>figma</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://figma.com/">Link</a>
+                     </div>
+                </div>
+            </div> 
+            <div class="card" data-item="pc">
+                <img src="canva.png" alt="">
+                <div class="content">
+                    <h4>Canva</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://canva.com/">Link</a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="card" data-item="mobile">
+                <img src="figma.png" alt="">
+                <div class="content">
+                    <h4>figma</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://figma.com/">Link</a>
+                     </div>
+                </div>
+            </div> 
+
+            <div class="card" data-item="pc">
+                <img src="canva.png" alt="">
+                <div class="content">
+                    <h4>Canva</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://canva.com/">Link</a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="card" data-item="mobile">
+                <img src="figma.png" alt="">
+                <div class="content">
+                    <h4>figma</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://figma.com/">Link</a>
+                     </div>
+                </div>
+            </div> 
+            <div class="card" data-item="pc">
+                <img src="canva.png" alt="">
+                <div class="content">
+                    <h4>Canva</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://canva.com/">Link</a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="card" data-item="mobile">
+                <img src="figma.png" alt="">
+                <div class="content">
+                    <h4>figma</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://figma.com/">Link</a>
+                     </div>
+                </div>
+            </div> 
+
+
+            <div class="card" data-item="pc">
+                <img src="canva.png" alt="">
+                <div class="content">
+                    <h4>Canva</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://canva.com/">Link</a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="card" data-item="mobile">
+                <img src="figma.png" alt="">
+                <div class="content">
+                    <h4>figma</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://figma.com/">Link</a>
+                     </div>
+                </div>
+            </div> 
+            <div class="card" data-item="pc">
+                <img src="canva.png" alt="">
+                <div class="content">
+                    <h4>Canva</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://canva.com/">Link</a>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="card" data-item="mobile">
+                <img src="figma.png" alt="">
+                <div class="content">
+                    <h4>figma</h4>
+                    <div class="progress-line"><span></span></div>
+                     <div class="info">
+                        <a href="https://figma.com/">Link</a>
+                     </div>
+                </div>
+            </div> 
+
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener('scroll',function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky',window.scrollY > 0);
+            });
+    
+            function toggleMenu(){
+                const toggleMenu = document.querySelector('.toggleMenu');
+                const nav = document.querySelector('.nav');
+                toggleMenu.classList.toggle('active');
+                nav.classList.toggle('active');
+            }
+            // scrolling
+            window.addEventListener('scroll',function(){
+                var anime = document.querySelectorAll('.animeX');
+    
+                for(var s = 0; s < anime.length; s++){
+                    var windowheight = window.innerHeight;
+                    var animetop = anime[s].getBoundingClientRect().top;
+                    var animepoint = 150;
+                    
+                    if(animetop < windowheight - animepoint){
+                        anime[s].classList.add('active');
+                    }
+                    else{
+                        anime[s].classList.remove('active');
+    
+                    }
+                }
+            })
+            // fliterable cards
+    
+            let list = document.querySelectorAll('.list');
+            let card = document.querySelectorAll('.card');
+    
+            for(let i = 0; i<list.length; i++){
+                list[i].addEventListener('click',function(){
+                    for(let j=0; j<list.length; j++){
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+    
+                    let dataFilter = this.getAttribute('data-filter');
+    
+                    for(let k=0; k<card.length; k++){
+                        card[k].classList.remove('active');
+                        card[k].classList.add('hide');
+    
+                        if(card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all'){
+                            card[k].classList.remove('hide');
+                            card[k].classList.add('active');
+                        }
+                    }
+                })
+            }
+        </script>
+</body>
+</html>

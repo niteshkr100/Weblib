@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="Category animeX" id="category">
+        <h2>Category</h2>
+        <div class="boxBx">
+            
+            <div class="box">
+                <img src="lolo\shop.webp" alt="">
+                <div class="content">
+                    <h4> <span></span>E-Commerce</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing   iusto eos incidunt animi, repudiandae exercitationem illo similique sit. Id ut aliquam, velit deleniti recusandae asperiores?</p>
+                    <div class="btn">
+                        <!-- <a href="#" class="watch">watch</a> -->
+                        <a href="commerce.html" class="join">Lets go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="lolo\gamedesign.png" alt="">
+                <div class="content">
+                    <h4> <span></span>Gamming</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing   iusto eos incidunt animi, repudiandae exercitationem illo similique sit. Id ut aliquam, velit deleniti recusandae asperiores?</p>
+                    <div class="btn">
+                        <!-- <a href="#" class="watch">watch</a> -->
+                        <a href="Gamming.html" class="join">Lets go</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="lolo\e-learning-education.jpg" alt="">
+                <div class="content">
+                    <h4> <span></span>E-Learning</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing   iusto eos incidunt animi, repudiandae exercitationem illo similique sit. Id ut aliquam, velit deleniti recusandae asperiores?</p>
+                    <div class="btn">
+                        <!-- <a href="#" class="watch">watch</a> -->
+                        <a href="learning.html" class="join">Lets go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="lolo\Top-UI-UX-tools.webp" alt="">
+                <div class="content">
+                    <h4> <span></span>Designing</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing   iusto eos incidunt animi, repudiandae exercitationem illo similique sit. Id ut aliquam, velit deleniti recusandae asperiores?</p>
+                    <div class="btn">
+                        <!-- <a href="#" class="watch">watch</a> -->
+                        <a href="designing.html" class="join">Lets go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="lolo\news.jpg" alt="">
+                <div class="content">
+                    <h4> <span></span>Newspaper</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing   iusto eos incidunt animi, repudiandae exercitationem illo similique sit. Id ut aliquam, velit deleniti recusandae asperiores?</p>
+                    <div class="btn">
+                        <!-- <a href="#" class="watch">watch</a> -->
+                        <a href="newspaper.html" class="join">Lets go</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="lolo\web-design-with-AI.png" alt="">
+                <div class="content">
+                    <h4> <span></span>AI</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing   iusto eos incidunt animi, repudiandae exercitationem illo similique sit. Id ut aliquam, velit deleniti recusandae asperiores?</p>
+                    <div class="btn">
+                        <!-- <a href="#" class="watch">watch</a> -->
+                        <a href="aicopy.html" class="join">Lets go</a>
+                    </div>
+                </div>
+            </div>
+             <br>
+             <br>
+        </div>
+    </div>
+
+        <script>
+            window.addEventListener('scroll',function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky',window.scrollY > 0);
+            });
+    
+            function toggleMenu(){
+                const toggleMenu = document.querySelector('.toggleMenu');
+                const nav = document.querySelector('.nav');
+                toggleMenu.classList.toggle('active');
+                nav.classList.toggle('active');
+            }
+            // scrolling
+            window.addEventListener('scroll',function(){
+                var anime = document.querySelectorAll('.animeX');
+    
+                for(var s = 0; s < anime.length; s++){
+                    var windowheight = window.innerHeight;
+                    var animetop = anime[s].getBoundingClientRect().top;
+                    var animepoint = 150;
+                    
+                    if(animetop < windowheight - animepoint){
+                        anime[s].classList.add('active');
+                    }
+                    else{
+                        anime[s].classList.remove('active');
+    
+                    }
+                }
+            })
+            // fliterable cards
+    
+            let list = document.querySelectorAll('.list');
+            let card = document.querySelectorAll('.card');
+    
+            for(let i = 0; i<list.length; i++){
+                list[i].addEventListener('click',function(){
+                    for(let j=0; j<list.length; j++){
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+    
+                    let dataFilter = this.getAttribute('data-filter');
+    
+                    for(let k=0; k<card.length; k++){
+                        card[k].classList.remove('active');
+                        card[k].classList.add('hide');
+    
+                        if(card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all'){
+                            card[k].classList.remove('hide');
+                            card[k].classList.add('active');
+                        }
+                    }
+                })
+            }
+        </script>
+</body>
+</html>
